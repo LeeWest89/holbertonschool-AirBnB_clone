@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-"""Creates the BaseModel"""
+"""Creates the BaseModel for HBnB"""
 import uuid
 from datetime import datetime
 
 
 class BaseModel:
     """Defines all common attributes/methods for other classes:"""
+
     def __init__(self):
+        """Sets up id, create_at, and update_at"""
         self.id = str(uuid.uuid4())
         self.create_at = datetime.now()
         self.update_at = datetime.now()
