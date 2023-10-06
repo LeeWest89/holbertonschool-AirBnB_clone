@@ -8,10 +8,10 @@ class BaseModel:
     """Defines all common attributes/methods for other classes:"""
 
     def __init__(self):
-        """Sets up id, create_at, and update_at"""
+        """Sets up id, created_at, and updated_at"""
         self.id = str(uuid.uuid4())
-        self.create_at = datetime.now()
-        self.update_at = datetime.now()
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
 
     def __str__(self):
         """prints class name, self.id, and self.__dict__"""
@@ -27,6 +27,6 @@ class BaseModel:
         """ returns a dictionary containing all keys/values of __dict__"""
         model_d = self.__dict__.copy()
         model_d["__class__"] = self.__class__.__name__
-        model_d["created_at"] = self.create_at.isoformat()
-        model_d["upadate_at"] = self.create_at.isoformat()
+        model_d["created_at"] = self.created_at.isoformat()
+        model_d["updated_at"] = self.updated_at.isoformat()
         return (model_d)
