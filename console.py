@@ -20,7 +20,7 @@ class HBNBCommand(cmd.Cmd):
         return (True)
 
     def postcmd(self, stop, line):
-        """creates newline after a commad is entered"""
+        """creates newline after a command is entered"""
         if line and line not in {'quit', 'EOF'}:
             print()
         return (stop)
