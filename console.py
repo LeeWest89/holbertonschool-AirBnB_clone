@@ -14,11 +14,11 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_EOF(self, arg):
-        """If command is EOF exit the program"""
+        """EOF command to exit the program"""
         return (True)
 
     def do_quit(self, arg):
-        """if quit is the input exit the program"""
+        """Quit command to exit the program"""
         return (True)
 
 
