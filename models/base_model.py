@@ -2,6 +2,7 @@
 """Creates the BaseModel for HBnB"""
 import uuid
 from datetime import datetime
+import time
 
 
 class BaseModel:
@@ -21,6 +22,7 @@ class BaseModel:
     def save(self):
         """updates the public instance attribute updated_at /
           with the current datetime"""
+        time.sleep(0.1)
         self.updated_at = datetime.now()
 
     def to_dict(self):
