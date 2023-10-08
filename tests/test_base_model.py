@@ -3,7 +3,7 @@ import unittest
 from models.base_model import BaseModel
 from datetime import datetime
 """These are our unit tests for the base model function. You will find they
-are divided per fucntion in the file."""
+are divided per function in the file."""
 
 
 class TestBaseModel(unittest.TestCase):
