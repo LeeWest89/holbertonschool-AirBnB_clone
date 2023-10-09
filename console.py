@@ -3,8 +3,6 @@
 interact with our site."""
 import cmd
 import models
-from models import storage
-from models.base_model import BaseModel
 
 
 class HBNBCommand(cmd.Cmd):
