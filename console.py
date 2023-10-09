@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""This file is our HBNB Project console. It's used to make new entries and 
-interact with our site."""
+"""This file is our HBNB Project console. It's used to make new entries and
+ interact with our site."""
 import cmd
 import models
 from models.base_model import BaseModel
