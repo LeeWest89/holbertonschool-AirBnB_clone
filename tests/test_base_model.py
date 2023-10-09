@@ -2,9 +2,12 @@
 import unittest
 from models.base_model import BaseModel
 from datetime import datetime
+"""These are our unit tests for the base model function. You will find they
+are divided per function in the file."""
+
 
 class TestBaseModel(unittest.TestCase):
-    """test for the BaseModel"""
+    """Tests for the BaseModel"""
 
     def test_no_args(self):
         """Test for no argument"""
@@ -39,8 +42,22 @@ class TestBaseModel(unittest.TestCase):
         model_d = self.model.to_dict()
         self.assertIsInstance(model_d, dict)
         self.assertEqual(model_d["__class__"], "BaseModel")
-        self.assertEqual(model_d["updated_at"], self.model.updated_at.isoformat())
-        self.assertEqual(model_d["created_at"], self.model.created_at.isoformat())
+        self.assertEqual(model_d["updated_at"],
+                         self.model.updated_at.isoformat())
+        self.assertEqual(model_d["created_at"],
+                         self.model.created_at.isoformat())
+
+    def test_unique_id(self):
+        """Tests that each BaseModel instance has a unique id"""
+        model1 = BaseModel()
+        model2 = BaseModel()
+        self.assertNotEqual(model1.id, model2.id)
+
+    def test_id_str(self):
+        """Tests that the id attribute is a string, and therefore public"""
+        model = BaseModel()
+        self.assertIsInstance(model.id, str)
+
 
 if __name__ == '__main__':
     unittest.main()
