@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-"""Creates HBNB console"""
+"""This file is our HBNB Project console. It's used to make new entries and 
+interact with our site."""
 import cmd
 import models
 
 
 class HBNBCommand(cmd.Cmd):
-    """The command line"""
+    """The command line interface for our project. You should be able to make
+    new instances from here."""
+
     prompt = "(hbnb) "
 
     def emptyline(self):

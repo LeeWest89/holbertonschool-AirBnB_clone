@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Creates the BaseModel for HBnB"""
+"""This file holds all of the methods that create the BaseModel for our HBnB
+ Project."""
 import uuid
 from models import storage
 from datetime import datetime
