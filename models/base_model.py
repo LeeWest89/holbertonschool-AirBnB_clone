@@ -2,7 +2,7 @@
 """This file holds all of the methods that create the BaseModel for our HBnB
  Project."""
 import uuid
-from models import storage
+import models
 from datetime import datetime
 import time
 
@@ -23,7 +23,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            storage.new(self)
+            models.storage.new(self)
 
     def __str__(self):
         """prints class name, self.id, and self.__dict__"""
@@ -35,7 +35,7 @@ class BaseModel:
           with the current datetime"""
         time.sleep(0.1)
         self.updated_at = datetime.now()
-        storage.save()
+        models.storage.save()
 
     def to_dict(self):
         """ returns a dictionary containing all keys/values of __dict__"""
