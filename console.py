@@ -79,7 +79,6 @@ class HBNBCommand(cmd.Cmd):
                     return ()
             print("** no instance found **")
 
-
     def do_destroy(self, arg):
         """Deletes an instance by id"""
         args = arg.split()
@@ -139,18 +138,22 @@ class HBNBCommand(cmd.Cmd):
             for key in models.storage.all():
                 if key == "{}.{}".format(args[0], args[1]):
                     if isinstance(arg[3], float):
-                        setattr(models.storage.all()[key], args[2], float(args[3]))
+                        setattr(models.storage.all()[key], args[2],
+                                float(args[3]))
                         models.storage.save()
                         return ()
                     elif isinstance(arg[3], int):
-                        setattr(models.storage.all()[key], args[2], int(args[3]))
+                        setattr(models.storage.all()[key], args[2],
+                                int(args[3]))
                         models.storage.save()
                         return ()
                     elif isinstance(arg[3], str):
-                        setattr(models.storage.all()[key], args[2], str(args[3]))
+                        setattr(models.storage.all()[key], args[2],
+                                str(args[3]))
                         models.storage.save()
                         return ()
-            print ("** no instance found **")
+            print("** no instance found **")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
