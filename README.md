@@ -116,9 +116,48 @@ The first step towards building your first full web application: __the AirBnB cl
 
 		- `last_name`
 
-## Avaliable Commands
+## Available Commands
+
+- __Opening Command Line Interface__
+
+    ```
+    $ ./console.py
+    (hbnb)
+    ```
+
+- __Basic Commands__
+
+    ```
+    (hbnb) help
+
+    Documented commands (type help <topic>):
+    ========================================
+    EOF  help  quit
+
+    (hbnb) 
+    (hbnb) help quit
+    Quit command to exit the program
+
+    (hbnb) 
+    (hbnb) 
+    (hbnb) quit 
+    ```
+
+- __Additional Commands__
+
+    ```
+	(hbnb) all BaseModel
+	["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}"]
+	(hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
+	[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}
+	(hbnb) destroy BaseModel 49faff9a-6318-451f-87b6-910505c55907
+	```
 
 ## Test
+
+All files, classes, and functions are tested with unit tests.
+
+They were preformed by using this command python3 -m unittest discover tests
 
 ## Authors
 Connor True <6676@holbertonstudents.com>
