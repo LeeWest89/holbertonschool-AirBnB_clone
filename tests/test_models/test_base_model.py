@@ -1,13 +1,39 @@
 #!/usr/bin/python3
+"""
+Defines unittests for the BaseModel class in models/base_model.py.
+"""
 import unittest
+import os
+from time import sleep
 from models.base_model import BaseModel
 from datetime import datetime
-"""These are our unit tests for the base model function. You will find they
-are divided per function in the file."""
 
 
 class TestBaseModel(unittest.TestCase):
     """Tests for the BaseModel"""
+
+    @classmethod
+    def setUp(cls):
+        if os.path.exists("file.json"):
+            os.rename("file.json", "tmp")
+
+    @classmethod
+    def tearDown(cls):
+        if os.path.exists("file.json"):
+            os.remove("file.json")
+        if os.path.exists("tmp"):
+            os.rename("tmp", "file.json")
+
+    def test_one_save(self):
+        model = BaseModel()
+        sleep(0.1)
+        first_updated_at = model.updated_at
+        model.save()
+        self.assertLess(first_updated_at, model.updated_at)
+
+    def test_to_dict_type(self):
+        model = BaseModel()
+        self.assertIsInstance(model.to_dict(), dict)
 
     def test_no_args(self):
         """Test for no argument"""
