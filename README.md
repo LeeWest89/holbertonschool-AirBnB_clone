@@ -157,7 +157,7 @@ The first step towards building your first full web application: __the AirBnB cl
 
 All files, classes, and functions are tested with unit tests.
 
-They were preformed by using this command python3 -m unittest discover tests
+They were preformed by using this command `python3 -m unittest discover tests`
 
 ## Authors
 Connor True <6676@holbertonstudents.com>
