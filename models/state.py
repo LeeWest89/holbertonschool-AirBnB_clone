@@ -4,6 +4,10 @@ from .base_model import BaseModel
 
 
 class State(BaseModel):
-    """State class that inherits from BaseModel"""
+    """State class that inherits from BaseModel
+
+    Attribute:
+        name (str): name of the state
+    """
 
     name = ""
