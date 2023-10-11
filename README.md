@@ -1,6 +1,6 @@
 # AirBNB Clone - The Console
 
-The first step towards building your first full web application: __the AirBnB clone__. This project guides you through the task of creating a command line interface and creating a way to serialize and deserialize.
+The first step towards building your first full web application: __the AirBnB clone__. This project guides you through the task of creating a command line interface, creating a instance that generates an id along with datetime of when it was created and creating a way to serialize and deserialize.
 
 ## General Information
 
