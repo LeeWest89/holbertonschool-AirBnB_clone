@@ -9,7 +9,6 @@ footer {
 }
 
 footer p {
-	top: center;
-    left: center;
+    text-align: center;
     color: black;
 }
