@@ -1,1 +1,37 @@
-#!/usr/bin/python3
+.places {
+    display: flex;
+    border: 0;
+    padding-left: 30px;
+    flex-direction: column;
+}
+
+.places_t {
+    margin-bottom: -25px;
+    padding-top: 30px;
+}
+
+.places h1 {
+    font-size: 30px;
+}
+
+.article {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.places article{
+    width: 390px;
+    margin: 20px;
+    padding: 20px;
+    border: solid #FF5A5F 1px;
+    border-radius: 4px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.article h2 {
+    font-size: 30px;
+    margin-top: -2px;
+}
