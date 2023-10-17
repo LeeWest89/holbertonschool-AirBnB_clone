@@ -14,14 +14,13 @@
     font-size: 30px;
 }
 
-.article {
+.articles {
     display: flex;
     justify-content: center;
-    align-items: baseline;
     flex-wrap: wrap;
 }
 
-.places article{
+.article {
     width: 390px;
     margin: 20px;
     padding: 20px;
@@ -29,9 +28,128 @@
     border-radius: 4px;
     font-size: 30px;
     text-align: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-bottom: 30px;
 }
 
 .article h2 {
     font-size: 30px;
-    margin-top: -2px;
+    margin-top: -1px;
+    padding-left: 0%;
+}
+
+.article_t {
+    width: 100%;
+}
+
+.price_by_night {
+    color: #FF5A5F;
+    border: solid #FF5A5F 4px;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    margin-top: -5px;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.price {
+    margin-top: -1px;
+}
+
+.price_t {
+    display: flex;
+}
+
+.information {
+    width: 80px;
+    border-top: solid #DDDDDD 1px;
+    border-bottom: solid #DDDDDD 1px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.description {
+    font-size: 14px;
+    margin-top: 7px;
+    text-align: left;
+}
+
+.max_guest {
+    height: inherit;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.guest_icon {
+    height: inherit;
+    width: inherit;
+    background: url("/images/guest_icon.png.png");
+    background-repeat: no-repeat;
+    margin-left: 35px;
+}
+
+.guest_amount h2 {
+    color: #484848;
+    font-size: 14px;
+}
+
+.number_rooms {
+    height: inherit;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.room_icon {
+    height: inherit;
+    width: inherit;
+    background: url("/images/bedroom_icon.png.png")
+    background-repeat: no-repeat;
+    margin-left: 35px;
+}
+
+.room_number h2 {
+    color: #484848;
+    font-size: 14px;
+}
+
+.number_bathrooms {
+    height: inherit;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bathroom_icon {
+    height: inherit;
+    width: inherit;
+    background: url("/images/bathroom_icon.png.png");
+    background-repeat: no-repeat;
+    margin-left: 35px;
+}
+
+.bathroom_number h2 {
+    color: #484848;
+    font-size: 14px;
+}
+
+.user {
+    font-size: 14px;
+    color: #484848;
+    margin-top: 15px;
+    font-weight: normal;
 }
